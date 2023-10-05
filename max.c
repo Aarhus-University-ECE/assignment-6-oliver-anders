@@ -5,8 +5,18 @@
 int max(int *numbers, int size) {
   // Excercise 2
   // Implement your code below...
+  // Ensure that the precondition is fulfilled 
+  assert(size > 0);
 
-  return -1;
+  int max_value = numbers[0]; // Initialize max_value to the first element 
+
+  for (int i = 1; i < size; i++) {
+    if (numbers[i] > max_value) {
+      max_value = numbers[i];
+    }
+  }
+
+  return max_value;
 }
 
 #ifndef TEST
